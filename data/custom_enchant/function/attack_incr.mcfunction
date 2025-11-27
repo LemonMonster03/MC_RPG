@@ -1,0 +1,1 @@
+scoreboard players add @s attack_marker 1

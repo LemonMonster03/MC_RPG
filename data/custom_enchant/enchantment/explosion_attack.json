@@ -1,0 +1,58 @@
+{
+  "description": "火属性武器",
+  "supported_items": "#minecraft:swords",
+  "primary_items": "#minecraft:swords",
+  "weight": 2,
+  "max_level": 5,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 5
+  },
+  "max_cost": {
+    "base": 20,
+    "per_level_above_first": 5
+  },
+  "anvil_cost": 2,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "attacker",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": "#minecraft:swords",
+                  "count": 1,
+                  "components": {
+                    "minecraft:custom_data": "{ice: 1}"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:damage_entity",
+          "damage_type": "minecraft:mob_attack",
+          "min_damage": {
+            "type": "minecraft:linear",
+            "base": 10,
+            "per_level_above_first": 1
+          },
+          "max_damage": {
+            "type": "minecraft:linear",
+            "base": 10,
+            "per_level_above_first": 1
+          }
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      }
+    ]
+  }
+}

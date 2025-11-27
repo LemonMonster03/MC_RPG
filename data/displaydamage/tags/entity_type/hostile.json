@@ -1,0 +1,17 @@
+{
+    "replace": false,
+    "values": [
+      "player",                          
+      "item",                            
+      "item_frame",
+      "glow_item_frame",
+      "text_display",
+      "block_display",
+      "interaction",
+      "marker",
+      "painting",
+      "experience_orb",
+      "area_effect_cloud",
+      "leash_knot"
+    ]
+  }

@@ -1,0 +1,11 @@
+{
+  "pack": {
+    "min_format": 88,
+    "max_format": 88,
+    "description": [
+			{"text":"关于","color":"gold"},
+			{"text":"1.21.9","color":"red"},
+			{"text":"的伤害显示数据包","color":"gold"}
+		]
+  }
+}
