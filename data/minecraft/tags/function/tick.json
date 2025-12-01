@@ -1,6 +1,7 @@
 {
     "values": [
         "displaydamage:main",
-        "custom_enchant:trigger_boomer"
+        "custom_enchant:trigger_boomer",
+        "magic_snowball:tick"
     ]
 }

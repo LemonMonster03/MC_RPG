@@ -1,0 +1,32 @@
+{
+  "description": "test",
+  "supported_items": "#minecraft:enchantable/vanishing",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "head"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "effect": {
+          "type": "minecraft:damage_entity",
+          "damage_type": "minecraft:magic",
+          "min_damage": 5,
+          "max_damage": 5
+        },
+        "enchanted": "victim",
+        "affected": "attacker"
+      }
+    ]
+  }
+}
