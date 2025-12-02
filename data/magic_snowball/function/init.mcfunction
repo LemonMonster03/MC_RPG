@@ -8,4 +8,6 @@ scoreboard objectives add heal_ring_timer dummy
 # 初始化雪球类型跟踪计分板
 scoreboard objectives add snowball_type dummy
 scoreboard objectives add last_snowball_count dummy
+scoreboard objectives add prev_snowball_count dummy
+scoreboard objectives add prev_snowball_type dummy
 
