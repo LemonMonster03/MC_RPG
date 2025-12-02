@@ -1,13 +1,17 @@
-# 检测新投掷的雪球，根据玩家手中的物品标签给雪球添加对应标签
+# 【第一步】根据上一次记录的玩家物品状态给雪球添加标签
 execute run function magic_snowball:tag_snowball_by_item
 
-# 检测带有 fire_snowball 标签的新雪球并初始化 marker
+# 【第二步】初始化新标记的雪球
 execute as @e[type=snowball,tag=fire_snowball,tag=!snowball_tracked] at @s run function magic_snowball:init_snowball
+execute as @e[type=snowball,tag=heal_snowball,tag=!snowball_tracked] at @s run function magic_snowball:init_snowball
 
-# 检测失去骑乘的 marker（雪球已消失），且未被处理过
-# 检测 marker 附近是否有雪球，如果没有则说明雪球已消失
+# 【第三步】检测雪球落地
 execute as @e[type=marker,tag=snowball_tracker,tag=!tracker_processed] at @s unless entity @e[type=snowball,distance=..0.5] run function magic_snowball:snowball_landed
 
-# 处理所有活跃的火焰圈
+# 【第四步】处理特效
 execute as @e[type=marker,tag=fire_ring] run function magic_snowball:fire_ball/tick
+execute as @e[type=marker,tag=heal_ring] run function magic_snowball:heal_ball/tick
+
+# 【第五步】跟踪玩家手中的物品状态（放到最后，记录当前状态供下次使用）
+execute as @a run function magic_snowball:track_player_items
 
