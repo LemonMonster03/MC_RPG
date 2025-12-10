@@ -1,0 +1,28 @@
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "flags": {
+          "is_on_ground": false
+        },
+        "type_specific": {
+          "type": "player",
+          "input": {
+            "forward": true,
+            "jump": true
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "dash_cd": 0
+      }
+    }
+  ]
+}

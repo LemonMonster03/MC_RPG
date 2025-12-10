@@ -1,0 +1,1 @@
+summon zombie ~ ~ ~ {equipment:{mainhand:{id:"minecraft:diamond_sword",count:1b,components:{"minecraft:custom_data":{element:"fire"}}}},CustomName:'{"text":"火属性僵尸","color":"red"}',CustomNameVisible:1b,PersistenceRequired:1b}

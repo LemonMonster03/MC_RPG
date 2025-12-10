@@ -4,6 +4,7 @@ scoreboard objectives add fire_ring_damage_timer dummy
 
 # 初始化治疗圈计分板
 scoreboard objectives add heal_ring_timer dummy
+scoreboard objectives add heal_ring_heal_timer dummy
 
 # 初始化雪球类型跟踪计分板
 scoreboard objectives add snowball_type dummy

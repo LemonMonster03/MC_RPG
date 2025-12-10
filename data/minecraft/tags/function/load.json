@@ -2,6 +2,7 @@
     "values": [
         "displaydamage:init",
         "custom_enchant:init",
-        "magic_snowball:init"
+        "magic_snowball:init",
+        "dash:init"
     ]
 }

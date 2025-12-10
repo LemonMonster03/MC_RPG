@@ -1,0 +1,1 @@
+$execute if entity @s[type=minecraft:$(entity)] run $(ins)
