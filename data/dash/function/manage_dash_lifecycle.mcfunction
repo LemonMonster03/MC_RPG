@@ -5,9 +5,8 @@
 execute as @a[scores={dash_timer=1..}] at @s run function dash:move_dash_entity
 
 # 对正在dash的玩家，TP到其专属的armor_stand位置
-# 使用distance=..50和limit=1确保每个玩家只匹配距离最近的armor_stand
-# 保持玩家原有的朝向（使用~ ~ ~ ~ ~来保持旋转）
-execute as @a[scores={dash_timer=1..}] at @s run tp @s @e[type=armor_stand,tag=dash_entity,limit=1,distance=..50] ~ ~ ~ ~ ~
+# 直接tp到armor_stand会保持玩家的旋转角度（允许玩家自由移动视角）
+execute as @a[scores={dash_timer=1..}] at @s run tp @s @e[type=armor_stand,tag=dash_entity,limit=1,distance=..50]
 
 # 对正在dash的玩家减少计时器
 execute as @a[scores={dash_timer=1..}] run scoreboard players remove @s dash_timer 1
