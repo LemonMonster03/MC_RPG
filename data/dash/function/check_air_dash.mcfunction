@@ -7,10 +7,12 @@
 execute if predicate dash:is_falling run scoreboard players set @s can_dash_state 1
 
 # 步骤2：如果玩家有can_dash标记且满足方向键+空格键+冷却条件，触发dash
-execute if score @s can_dash_state matches 1 if predicate dash:can_dash run function dash:perform_dash
+# 关键：使用 execute at @s 确保在玩家位置执行函数，避免执行位置错误
+execute if score @s can_dash_state matches 1 if predicate dash:can_dash at @s run function dash:perform_dash
 
 # 步骤3：如果玩家按下空格键，清除can_dash标记（防止连续触发）
-execute if predicate dash:is_jumping run scoreboard players reset @s can_dash_state
+# 注意：这个要在步骤2之后执行，否则会清除标记导致无法触发
+execute if predicate dash:is_jumping if score @s can_dash_state matches 1 run scoreboard players reset @s can_dash_state
 
 # 清理：如果玩家回到地面，重置can_dash标记
 execute if entity @s[nbt={OnGround:1b}] run scoreboard players reset @s can_dash_state

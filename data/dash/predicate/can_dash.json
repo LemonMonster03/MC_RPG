@@ -26,8 +26,7 @@
             "type_specific": {
               "type": "player",
               "input": {
-                "forward": true,
-                "jump": true
+                "forward": true
               }
             }
           }
@@ -39,8 +38,7 @@
             "type_specific": {
               "type": "player",
               "input": {
-                "left": true,
-                "jump": true
+                "left": true
               }
             }
           }
@@ -52,8 +50,7 @@
             "type_specific": {
               "type": "player",
               "input": {
-                "right": true,
-                "jump": true
+                "right": true
               }
             }
           }
@@ -65,8 +62,7 @@
             "type_specific": {
               "type": "player",
               "input": {
-                "backward": true,
-                "jump": true
+                "backward": true
               }
             }
           }
